@@ -1,0 +1,20 @@
+{
+  "name": "card-validator-utils",
+  "version": "1.0.0",
+  "description": "Library package util for payment industry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshkb7/card-validator-utils.git"
+  },
+  "keywords": ["card-validator-utils"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigneshkb7/card-validator-utils/issues"
+  },
+  "homepage": "https://github.com/vigneshkb7/card-validator-utils#readme"
+}
