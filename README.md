@@ -5,7 +5,7 @@ Library package util for payment industry
 ## installation
 
 ```
-npm i card-validatore-utils
+npm i card-validator-utils
 ```
 
 ## usage
