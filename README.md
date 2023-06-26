@@ -29,3 +29,21 @@ const { isEncryptedToken } = require("card-validator-utils");
 isEncryptedToken('42424242F242R24242424242F24242424242424C424X')
 
 ```
+
+`detectCardType` function to detect card type
+
+currently it supports
+
+1. diners club
+2. visa
+3. mastercard
+4. american express
+5. discover
+
+```
+const { detectCardType } = require("card-validator-utils");
+
+var cardType = detectCardType(cardNumber);
+console.log(cardType);  // Output: diners club
+
+```
