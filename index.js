@@ -70,9 +70,29 @@ function validateCreditCardNumber(cardNumber) {
   return sum % 10 === 0;
 }
 
+function validateCVVORCVCCode(securityCode) {
+  // Remove any spaces or dashes from the security code
+  securityCode = securityCode.replace(/[^\d]/g, "");
+
+  // Check if the security code is empty or not a number
+  if (securityCode === "" || isNaN(securityCode)) {
+    return false;
+  }
+
+  // Check if the security code is 3 or 4 digits long
+  var validLengths = [3, 4];
+  if (!validLengths.includes(securityCode.length)) {
+    return false;
+  }
+
+  // The security code is valid
+  return true;
+}
+
 module.exports = {
   isCreditCard,
   isEncryptedToken,
   detectCardType,
   validateCreditCardNumber,
+  validateCVVORCVCCode,
 };

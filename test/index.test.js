@@ -3,6 +3,7 @@ const {
   isEncryptedToken,
   detectCardType,
   validateCreditCardNumber,
+  validateCVVORCVCCode,
 } = require("../index");
 
 describe("Testing credit card Functionality", () => {
@@ -53,6 +54,21 @@ describe("Validate the card number", () => {
     expect(validateCreditCardNumber("30569309025904")).toBe(true);
   });
 
-  test("should return false for invalid card number", () => {});
-  expect(validateCreditCardNumber("42428974842424242")).toBe(false);
+  test("should return false for invalid card number", () => {
+    expect(validateCreditCardNumber("42428974842424242")).toBe(false);
+  });
+});
+
+describe("Validate the CVV/CVC number", () => {
+  test("should return true for valid CVV / CVC", () => {
+    expect(validateCVVORCVCCode("234")).toBe(true);
+    expect(validateCVVORCVCCode("2345")).toBe(true);
+    expect(validateCVVORCVCCode("8987")).toBe(true);
+    expect(validateCVVORCVCCode("098")).toBe(true);
+  });
+
+  test("should return false for invalid CVV / CVC", () => {
+    expect(validateCVVORCVCCode("67")).toBe(false);
+    expect(validateCVVORCVCCode("jhjjhh")).toBe(false);
+  });
 });
