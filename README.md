@@ -2,6 +2,20 @@
 
 Library package util for payment industry
 
+Key features and benefits of the "card-validator-utils" package may include:
+
+Credit Card Validation: The package offers functions to validate credit card numbers, ensuring they follow the correct format and meet specific criteria.
+
+Card Type Detection: It provides functionality to detect the type of credit card based on the card number, such as Visa, Mastercard, American Express, Diners Club etc.
+
+Checksum Verification: The package includes algorithms to perform checksum verification on credit card numbers, ensuring the validity of the entered digits.
+
+Expiration Date Validation: It offers functions to validate the expiration date of credit cards, checking if the date is in the future and adheres to the expected format.
+
+Security Code (CVV/CVC) Validation: The package provides utilities to validate the security code (CVV/CVC) of credit cards, verifying the number of digits and ensuring it meets the expected format.
+
+Luhn Algorithm Implementation: The Luhn algorithm, a common method for credit card validation, is implemented within the package to validate the correctness of credit card numbers.
+
 ## installation
 
 ```
