@@ -1,6 +1,6 @@
 {
   "name": "card-validator-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library package util for payment industry",
   "main": "index.js",
   "scripts": {
