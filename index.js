@@ -38,8 +38,41 @@ function detectCardType(cardNumber) {
   }
 }
 
+function validateCreditCardNumber(cardNumber) {
+  // Remove any spaces or dashes from the card number
+  cardNumber = cardNumber.replace(/[^\d]/g, "");
+
+  // Check if the card number is empty or not a number
+  if (cardNumber === "" || isNaN(cardNumber)) {
+    return false;
+  }
+
+  // Reverse the card number and convert it to an array
+  var cardNumberArray = cardNumber.split("").reverse();
+
+  // Apply the Luhn algorithm
+  var sum = 0;
+  for (var i = 0; i < cardNumberArray.length; i++) {
+    var num = parseInt(cardNumberArray[i], 10);
+
+    if (i % 2 === 1) {
+      num *= 2;
+
+      if (num > 9) {
+        num -= 9;
+      }
+    }
+
+    sum += num;
+  }
+
+  // The card number is valid if the sum is divisible by 10
+  return sum % 10 === 0;
+}
+
 module.exports = {
   isCreditCard,
   isEncryptedToken,
   detectCardType,
+  validateCreditCardNumber,
 };
