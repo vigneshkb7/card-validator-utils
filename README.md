@@ -61,3 +61,12 @@ var cardType = detectCardType(cardNumber);
 console.log(cardType);  // Output: diners club
 
 ```
+
+`validateCreditCardNumber` function to test valid card number
+
+```
+const { validateCreditCardNumber } = require("card-validator-utils");
+
+validateCreditCardNumber("4242424242424242") // returns boolean
+
+```
