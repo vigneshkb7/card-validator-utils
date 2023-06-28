@@ -61,3 +61,11 @@ var cardType = detectCardType(cardNumber);
 console.log(cardType);  // Output: diners club
 
 ```
+
+`validateCVVORCVCCode` function to detect valida CVV or CVC number it can 3 0r 4 digit number.
+
+```
+const { validateCVVORCVCCode } = require("card-validator-utils");
+
+validateCVVORCVCCode('424')
+```
