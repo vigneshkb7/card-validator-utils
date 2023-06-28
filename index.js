@@ -89,10 +89,42 @@ function validateCVVORCVCCode(securityCode) {
   return true;
 }
 
+function validateExpirationDate(expirationMonth, expirationYear) {
+  // Get the current date
+  var currentDate = new Date();
+  var currentYear = currentDate.getFullYear();
+  var currentMonth = currentDate.getMonth() + 1; // Adding 1 since getMonth() returns zero-based index
+
+  // Convert the expiration month and year to numbers
+  var expMonth = parseInt(expirationMonth, 10);
+  var expYear = parseInt(expirationYear, 10);
+
+  // Check if the expiration year is in the future
+  if (expYear < currentYear) {
+    return false;
+  }
+
+  // Check if the expiration year is the same as the current year but the expiration month is in the past
+  if (expYear === currentYear && expMonth < currentMonth) {
+    return false;
+  }
+
+  // The expiration date is valid
+  return true;
+}
+
+// Example usage
+var expirationMonth = "06";
+var expirationYear = "2023";
+var isValid = validateExpirationDate(expirationMonth, expirationYear);
+
+console.log(isValid); // Output: true
+
 module.exports = {
   isCreditCard,
   isEncryptedToken,
   detectCardType,
   validateCreditCardNumber,
   validateCVVORCVCCode,
+  validateExpirationDate,
 };

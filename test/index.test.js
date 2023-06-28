@@ -4,6 +4,7 @@ const {
   detectCardType,
   validateCreditCardNumber,
   validateCVVORCVCCode,
+  validateExpirationDate,
 } = require("../index");
 
 describe("Testing credit card Functionality", () => {
@@ -70,5 +71,19 @@ describe("Validate the CVV/CVC number", () => {
   test("should return false for invalid CVV / CVC", () => {
     expect(validateCVVORCVCCode("67")).toBe(false);
     expect(validateCVVORCVCCode("jhjjhh")).toBe(false);
+  });
+});
+
+describe("Validate Card Expiration Date", () => {
+  test("should return true for valid Future Date", () => {
+    expect(validateExpirationDate("02", "2024")).toBe(true);
+    expect(validateExpirationDate("11", "2023")).toBe(true);
+    expect(validateExpirationDate("12", "2029")).toBe(true);
+    expect(validateExpirationDate("01", "2025")).toBe(true);
+  });
+
+  test("should return false for invalid date", () => {
+    expect(validateExpirationDate("01", "2023")).toBe(false);
+    expect(validateExpirationDate("05", "2022")).toBe(false);
   });
 });

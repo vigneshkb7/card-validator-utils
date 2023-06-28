@@ -67,5 +67,17 @@ console.log(cardType);  // Output: diners club
 ```
 const { validateCVVORCVCCode } = require("card-validator-utils");
 
-validateCVVORCVCCode('424')
+validateCVVORCVCCode('424') // return true
+
+
+```
+
+`validateExpirationDate` function to check the valid expiration date
+
+```
+const { validateExpirationDate } = require("card-validator-utils");
+
+validateExpirationDate('05','2025') // return true
+
+
 ```
