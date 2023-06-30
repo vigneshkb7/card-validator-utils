@@ -56,10 +56,12 @@ currently it supports
 
 ```
 
-![Alt](https://repobeats.axiom.co/api/embed/dd36319fddc491ec42260b34789b3ab42a1645a8.svg "Repobeats analytics image")
+
 const { detectCardType } = require("card-validator-utils");
 
 var cardType = detectCardType(cardNumber);
 console.log(cardType);  // Output: diners club
 
 ```
+
+![Alt](https://repobeats.axiom.co/api/embed/dd36319fddc491ec42260b34789b3ab42a1645a8.svg "Repobeats analytics image")
