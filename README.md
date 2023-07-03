@@ -64,7 +64,6 @@ console.log(cardType);  // Output: diners club
 
 ```
 
-<<<<<<< HEAD
 `validateCVVORCVCCode` function to detect valida CVV or CVC number it can 3 0r 4 digit number.
 
 ```
@@ -84,6 +83,5 @@ validateExpirationDate('05','2025') // return true
 
 
 ```
-=======
+
 ![Alt](https://repobeats.axiom.co/api/embed/dd36319fddc491ec42260b34789b3ab42a1645a8.svg "Repobeats analytics image")
->>>>>>> aaa47053a779e8354f00e2fd1b27bc01eb01e940
