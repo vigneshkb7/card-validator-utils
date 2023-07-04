@@ -1,4 +1,9 @@
-const { isCreditCard, isEncryptedToken, detectCardType } = require("../index");
+const {
+  isCreditCard,
+  isEncryptedToken,
+  detectCardType,
+  validateCreditCardNumber,
+} = require("../index");
 
 describe("Testing credit card Functionality", () => {
   test("should return true for valida cards", () => {
@@ -38,4 +43,16 @@ describe("Testing Card Type", () => {
   test("should return invalid", () => {
     expect(detectCardType("45320112890368")).toBe("invalid");
   });
+});
+
+describe("Validate the card number", () => {
+  test("should return true for valid card number", () => {
+    expect(validateCreditCardNumber("6011111111111117")).toBe(true);
+    expect(validateCreditCardNumber("6011601160116611")).toBe(true);
+    expect(validateCreditCardNumber("6011000990139424")).toBe(true);
+    expect(validateCreditCardNumber("30569309025904")).toBe(true);
+  });
+
+  test("should return false for invalid card number", () => {});
+  expect(validateCreditCardNumber("42428974842424242")).toBe(false);
 });
