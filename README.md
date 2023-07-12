@@ -84,4 +84,13 @@ validateExpirationDate('05','2025') // return true
 
 ```
 
+`validateCreditCardNumber` function to test valid card number
+
+```
+const { validateCreditCardNumber } = require("card-validator-utils");
+
+validateCreditCardNumber("4242424242424242") // returns boolean
+
+```
+
 ![Alt](https://repobeats.axiom.co/api/embed/dd36319fddc491ec42260b34789b3ab42a1645a8.svg "Repobeats analytics image")
